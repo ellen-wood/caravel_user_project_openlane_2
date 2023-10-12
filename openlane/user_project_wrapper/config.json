@@ -85,17 +85,17 @@
             ],
             "spef": {
                 "min_*": [
-                    "dir::../../spef/multicorner/user_proj_example.min.spef"
+                    "dir::../../spef/multicorner/TOP_digital.min.spef"
                 ],
                 "nom_*": [
-                    "dir::../../spef/multicorner/user_proj_example.nom.spef"
+                    "dir::../../spef/multicorner/TOP_digital.nom.spef"
                 ],
                 "max_*": [
-                    "dir::../../spef/multicorner/user_proj_example.max.spef"
+                    "dir::../../spef/multicorner/TOP_digital.max.spef"
                 ]
             },
             "libs": {
-                "*": "dir::../../lib/user_proj_example.lib"
+                "*": "dir::../../lib/TOP_digital.lib"
             }
         }
     },

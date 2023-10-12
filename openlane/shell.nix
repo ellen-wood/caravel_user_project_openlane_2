@@ -13,8 +13,8 @@
 # limitations under the License.
 {
     pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/0218941ea68b4c625533bead7bbb94ccce52dceb.tar.gz") {},
-    openlane-version ? "2.0.0b7",
-    openlane-sha256 ? "sha256-LGO/dpSdAD2zYj+8X9MnsaRVIrX7P9AYHIa2ozJdB8M="
+    openlane-version ? "2.0.0b15",
+    openlane-sha256 ? "sha256-jQDICuw5H3Z86jl2dlwuQi49FYcUPYlEcZJ8MnwjeHs="
 }:
 
 let openlane-src = pkgs.fetchFromGitHub {
