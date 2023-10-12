@@ -25,7 +25,7 @@ OPENLANE2_TAG ?= 2023.07.19
 OPENLANE2_IMAGE_NAME ?= efabless/openlane:$(OPENLANE2_TAG)
 designs = $(shell cd $(PROJECT_ROOT)/openlane && find * -maxdepth 0 -type d)
 current_design = null
-OPENLANE2_USE_NIX ?= 0
+OPENLANE2_USE_NIX ?= 1
 ROOTLESS ?= 0
 USER_ARGS = -u $$(id -u $$USER):$$(id -g $$USER)
 ifeq ($(ROOTLESS), 1)

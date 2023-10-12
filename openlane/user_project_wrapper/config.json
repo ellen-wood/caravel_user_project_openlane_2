@@ -94,7 +94,7 @@
                     "dir::../../spef/multicorner/TOP_digital.max.spef"
                 ]
             },
-            "libs": {
+            "lib": {
                 "*": "dir::../../lib/TOP_digital.lib"
             }
         }
