@@ -1,0 +1,176 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176d5, clang++ 11.1.0 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v' to AST representation.
+Generating RTLIL representation for module `\TOP_digital'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/defines.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/defines.v' to AST representation.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v' to AST representation.
+Generating RTLIL representation for module `\pwm_counter'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_oneshot_detector.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_oneshot_detector.v' to AST representation.
+Generating RTLIL representation for module `\pwm_oneshot_detector'.
+Successfully finished Verilog frontend.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \TOP_digital
+Used module:     \pwm_oneshot_detector
+Used module:     \pwm_counter
+Parameter \WIDTH = 8
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\pwm_oneshot_detector'.
+Parameter \WIDTH = 8
+Generating RTLIL representation for module `$paramod\pwm_oneshot_detector\WIDTH=s32'00000000000000000000000000001000'.
+Parameter \WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pwm_oneshot_detector\WIDTH=s32'00000000000000000000000000001000'.
+Parameter \WIDTH = 8
+
+5.3. Executing AST frontend in derive mode using pre-parsed AST for module `\pwm_counter'.
+Parameter \WIDTH = 8
+Generating RTLIL representation for module `$paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000'.
+
+5.4. Analyzing design hierarchy..
+Top module:  \TOP_digital
+Used module:     $paramod\pwm_oneshot_detector\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000
+
+5.5. Analyzing design hierarchy..
+Top module:  \TOP_digital
+Used module:     $paramod\pwm_oneshot_detector\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000
+Removing unused module `\pwm_oneshot_detector'.
+Removing unused module `\pwm_counter'.
+Removed 2 unused modules.
+Warning: Resizing cell port TOP_digital.pwm_fall_detector.pos from 32 bits to 8 bits.
+Warning: Resizing cell port TOP_digital.pwm_rise_detector.pos from 32 bits to 8 bits.
+Renaming module TOP_digital to TOP_digital.
+
+6. Executing PROC pass (convert processes to netlists).
+
+6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:191$6'.
+Cleaned up 1 empty switch.
+
+6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:220$12 in module TOP_digital.
+Marked 1 switch rules as full_case in process $proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1 in module TOP_digital.
+Marked 1 switch rules as full_case in process $proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v:15$23 in module $paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.
+Removed a total of 0 dead cases.
+
+6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 0 assignments to connections.
+
+6.4. Executing PROC_INIT pass (extract init attributes).
+
+6.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~6 debug messages>
+
+6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:220$12'.
+     1/1: $0\wbs_ack_o[0:0]
+Creating decoders for process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:191$6'.
+     1/1: $0\wbs_dat_o[31:0]
+Creating decoders for process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+     1/9: $0\CTRL_reg[31:0]
+     2/9: $0\pwm3_fall_pos[31:0]
+     3/9: $0\pwm3_rise_pos[31:0]
+     4/9: $0\pwm2_fall_pos[31:0]
+     5/9: $0\pwm2_rise_pos[31:0]
+     6/9: $0\pwm1_fall_pos[31:0]
+     7/9: $0\pwm1_rise_pos[31:0]
+     8/9: $0\pwm0_fall_pos[31:0]
+     9/9: $0\pwm0_rise_pos[31:0]
+Creating decoders for process `$paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v:15$23'.
+     1/1: $0\count[7:0]
+
+6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\TOP_digital.\wbs_ack_o' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:220$12'.
+  created $dff cell `$procdff$132' with positive edge clock.
+Creating register for signal `\TOP_digital.\wbs_dat_o' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:191$6'.
+  created $dff cell `$procdff$133' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm0_rise_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$134' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm0_fall_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$135' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm1_rise_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$136' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm1_fall_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$137' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm2_rise_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$138' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm2_fall_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$139' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm3_rise_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$140' with positive edge clock.
+Creating register for signal `\TOP_digital.\pwm3_fall_pos' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$141' with positive edge clock.
+Creating register for signal `\TOP_digital.\CTRL_reg' using process `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+  created $dff cell `$procdff$142' with positive edge clock.
+Creating register for signal `$paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.\count' using process `$paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v:15$23'.
+  created $dff cell `$procdff$143' with positive edge clock.
+
+6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:220$12'.
+Removing empty process `TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:220$12'.
+Found and cleaned up 1 empty switch in `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:191$6'.
+Removing empty process `TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:191$6'.
+Found and cleaned up 3 empty switches in `\TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+Removing empty process `TOP_digital.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/TOP_digital.v:159$1'.
+Found and cleaned up 1 empty switch in `$paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v:15$23'.
+Removing empty process `$paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.$proc$/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/src/pwm_counter.v:15$23'.
+Cleaned up 6 empty switches.
+
+6.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TOP_digital.
+<suppressed ~6 debug messages>
+Optimizing module $paramod\pwm_oneshot_detector\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\pwm_counter\WIDTH=s32'00000000000000000000000000001000.
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 3cee9a2a1d, CPU: user 0.02s system 0.00s, MEM: 41.16 MB peak
+Yosys 0.30+48 (git sha1 14d50a176d5, clang++ 11.1.0 -fPIC -Os)
+Time spent: 30% 8x read_verilog (0 sec), 21% 1x opt_expr (0 sec), ...

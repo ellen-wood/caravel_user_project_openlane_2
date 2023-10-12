@@ -1,0 +1,91 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176d5, clang++ 11.1.0 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+Defining USE_POWER_PINSâ¦
+Reading macro netlist '/root/eda/caravel_user_project_openlane_2/verilog/gl/TOP_digital.v' as a black-boxâ¦
+
+1. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/verilog/gl/TOP_digital.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/verilog/gl/TOP_digital.v' to AST representation.
+Generating RTLIL representation for module `\TOP_digital'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/verilog/rtl/defines.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/verilog/rtl/defines.v' to AST representation.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /root/eda/caravel_user_project_openlane_2/verilog/rtl/user_project_wrapper.v
+Parsing SystemVerilog input from `/root/eda/caravel_user_project_openlane_2/verilog/rtl/user_project_wrapper.v' to AST representation.
+Generating RTLIL representation for module `\user_project_wrapper'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \user_project_wrapper
+
+4.2. Analyzing design hierarchy..
+Top module:  \user_project_wrapper
+Removed 0 unused modules.
+Renaming module user_project_wrapper to user_project_wrapper.
+
+5. Executing PROC pass (convert processes to netlists).
+
+5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.4. Executing PROC_INIT pass (extract init attributes).
+
+5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module user_project_wrapper.
+
+End of script. Logfile hash: 96be9b26de, CPU: user 6.08s system 0.19s, MEM: 665.69 MB peak
+Yosys 0.30+48 (git sha1 14d50a176d5, clang++ 11.1.0 -fPIC -Os)
+Time spent: 99% 6x read_verilog (6 sec), 0% 1x json (0 sec), ...

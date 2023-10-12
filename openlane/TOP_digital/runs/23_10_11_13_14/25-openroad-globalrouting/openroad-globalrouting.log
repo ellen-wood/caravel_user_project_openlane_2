@@ -1,0 +1,221 @@
+Reading OpenROAD database at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_14/23-openroad-resizertimingpostcts/TOP_digital.odb'…
+Reading library file at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_14/tmp/a2351be522bd427db966f73408bc1506.lib'…
+Reading design constraints file at '/nix/store/ixkawr2rm870iw9p31jr6cicdswgpcx8-python3-3.10.9-env/lib/python3.10/site-packages/openlane/scripts/base.sdc'…
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[WARNING STA-0559] transition time can not be specified for virtual clocks.
+[INFO] Setting timing derate to: 5%
+[WARNING STA-0357] virtual clock clk can not be propagated.
+[INFO] Setting signal min routing layer to: met1 and clock min routing layer to met1. 
+[INFO] Setting signal max routing layer to: met4 and clock max routing layer to met4. 
+-congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met4
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 0.6150
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 17
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 350
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal     233280        116933          49.87%
+met2       Vertical       174960        116929          33.17%
+met3       Horizontal     116640         81676          29.98%
+met4       Vertical        81648         46030          43.62%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 1167
+[INFO GRT-0198] Via related Steiner nodes: 16
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 1291
+[INFO GRT-0112] Final usage 3D: 7829
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1            116933          1915            1.64%             0 /  0 /  0
+met2            116929          2041            1.75%             0 /  0 /  0
+met3             81676             0            0.00%             0 /  0 /  0
+met4             46030             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           361568          3956            1.09%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 32064 um
+[INFO GRT-0014] Routed nets: 323
+%OL_CREATE_REPORT antenna.rpt
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+Net: net2
+  Pin: fanout57/A (sky130_fd_sc_hd__buf_2)
+    Layer: met2
+      Partial area ratio:   52.23
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:  264.65
+      Required ratio: 4135.24 (Side area) 
+      Cumulative area ratio:  259.04
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio: 1299.95
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: met1
+      Partial area ratio:  206.81
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio: 1035.30
+      Required ratio:  400.00 (Side area) (VIOLATED)
+      Cumulative area ratio:  206.81
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio: 1035.30
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: li1
+      Partial area ratio:    0.00
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:    0.00
+      Required ratio:   75.00 (Side area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Via: M1M2_PR
+      Partial area ratio:    0.42
+      Required ratio:    6.00 (Gate area) 
+      Cumulative area ratio:    0.61
+      Required ratio:    0.00 (Cumulative area) 
+
+    Via: L1M1_PR
+      Partial area ratio:    0.18
+      Required ratio:    3.00 (Gate area) 
+      Cumulative area ratio:    0.18
+      Required ratio:    0.00 (Cumulative area) 
+
+  Pin: fanout59/A (sky130_fd_sc_hd__buf_2)
+    Layer: met2
+      Partial area ratio:   52.23
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:  264.65
+      Required ratio: 4135.24 (Side area) 
+      Cumulative area ratio:  259.04
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio: 1299.95
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: met1
+      Partial area ratio:    0.00
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:    0.00
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: li1
+      Partial area ratio:    0.00
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:    0.00
+      Required ratio:   75.00 (Side area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Via: M1M2_PR
+      Partial area ratio:    0.14
+      Required ratio:    6.00 (Gate area) 
+      Cumulative area ratio:    0.32
+      Required ratio:    0.00 (Cumulative area) 
+
+    Via: L1M1_PR
+      Partial area ratio:    0.18
+      Required ratio:    3.00 (Gate area) 
+      Cumulative area ratio:    0.18
+      Required ratio:    0.00 (Cumulative area) 
+
+  Pin: fanout58/A (sky130_fd_sc_hd__buf_2)
+    Layer: met2
+      Partial area ratio:   52.23
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:  264.65
+      Required ratio: 4135.24 (Side area) 
+      Cumulative area ratio:  259.04
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio: 1299.95
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: met1
+      Partial area ratio:    0.00
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:    0.00
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: li1
+      Partial area ratio:    0.00
+      Required ratio:    0.00 (Gate area) 
+      Partial area ratio:    0.00
+      Required ratio:   75.00 (Side area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative area) 
+      Cumulative area ratio:    0.00
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Via: M1M2_PR
+      Partial area ratio:    0.14
+      Required ratio:    6.00 (Gate area) 
+      Cumulative area ratio:    0.32
+      Required ratio:    0.00 (Cumulative area) 
+
+    Via: L1M1_PR
+      Partial area ratio:    0.18
+      Required ratio:    3.00 (Gate area) 
+      Cumulative area ratio:    0.18
+      Required ratio:    0.00 (Cumulative area) 
+
+
+[INFO ANT-0002] Found 1 net violations.
+[INFO ANT-0001] Found 1 pin violations.
+%OL_END_REPORT
+[INFO GRT-0006] Repairing antennas, iteration 1.
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0012] Found 1 antenna violations.
+[INFO GRT-0015] Inserted 1 diodes.
+[INFO GRT-0009] rerouting 233 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 17
+[INFO GRT-0006] Repairing antennas, iteration 2.
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0012] Found 0 antenna violations.
+%OL_CREATE_REPORT antenna_after.rpt
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+%OL_END_REPORT
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Writing OpenROAD database to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_14/25-openroad-globalrouting/TOP_digital.odb'…
+Writing netlist to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_14/25-openroad-globalrouting/TOP_digital.nl.v'…
+Writing powered netlist to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_14/25-openroad-globalrouting/TOP_digital.pnl.v'…
+Writing layout to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_14/25-openroad-globalrouting/TOP_digital.def'…

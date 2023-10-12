@@ -1,0 +1,1391 @@
+Reading timing models for corner min_tt_025C_1v80…
+Reading timing library for the 'min_tt_025C_1v80' corner at '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading top-level netlist at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/34-openroad-fillinsertion/TOP_digital.nl.v'…
+Linking design 'TOP_digital' from netlist…
+Warning: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/34-openroad-fillinsertion/TOP_digital.nl.v line 2337, module sky130_fd_sc_hd__tapvpwrvgnd_1 not found. Creating black box for TAP_644.
+Warning: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/34-openroad-fillinsertion/TOP_digital.nl.v line 14336, module sky130_ef_sc_hd__decap_12 not found. Creating black box for FILLER_0_0_3.
+Warning: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/34-openroad-fillinsertion/TOP_digital.nl.v line 14338, module sky130_fd_sc_hd__fill_1 not found. Creating black box for FILLER_0_0_27.
+Warning: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/34-openroad-fillinsertion/TOP_digital.nl.v line 14348, module sky130_fd_sc_hd__fill_2 not found. Creating black box for FILLER_0_0_110.
+Reading design constraints file at '/nix/store/ixkawr2rm870iw9p31jr6cicdswgpcx8-python3-3.10.9-env/lib/python3.10/site-packages/openlane/scripts/base.sdc'…
+Warning: base.sdc line 15, port 'clk' not found.
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+Warning: base.sdc line 29, port 'clk' not found.
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+Warning: base.sdc line 66, transition time can not be specified for virtual clocks.
+[INFO] Setting timing derate to: 5%
+Reading top-level design parasitics for the 'min_tt_025C_1v80' corner at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/35-openroad-rcx/TOP_digital.min.spef'…
+Warning: corner.tcl line 46, virtual clock clk can not be propagated.
+%OL_CREATE_REPORT min.rpt
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+======================= min_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT max.rpt
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+======================= min_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT checks.rpt
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= min_tt_025C_1v80 Corner ===================================
+
+Startpoint: wbs_adr_i[25] (input port clocked by clk)
+Endpoint: _202_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  5.000000    5.000000 v input external delay
+                      0.008862    0.004587    5.004587 v wbs_adr_i[25] (in)
+     1    0.002898                                       wbs_adr_i[25] (net)
+                      0.008862    0.000000    5.004587 v input20/A (sky130_fd_sc_hd__buf_4)
+                      0.084257    0.171081    5.175668 v input20/X (sky130_fd_sc_hd__buf_4)
+     2    0.058453                                       net20 (net)
+                      0.089740    0.016644    5.192311 v _150_/A (sky130_fd_sc_hd__or4_4)
+                      0.165938    0.667599    5.859910 v _150_/X (sky130_fd_sc_hd__or4_4)
+     2    0.057224                                       _065_ (net)
+                      0.167686    0.014412    5.874323 v _151_/D (sky130_fd_sc_hd__nor4_1)
+                      0.348797    0.307342    6.181665 ^ _151_/Y (sky130_fd_sc_hd__nor4_1)
+     1    0.006619                                       _066_ (net)
+                      0.348797    0.000205    6.181870 ^ wire56/A (sky130_fd_sc_hd__clkbuf_2)
+                      0.114515    0.233099    6.414969 ^ wire56/X (sky130_fd_sc_hd__clkbuf_2)
+     1    0.019472                                       net56 (net)
+                      0.114553    0.001698    6.416667 ^ fanout55/A (sky130_fd_sc_hd__clkbuf_2)
+                      0.106131    0.174475    6.591142 ^ fanout55/X (sky130_fd_sc_hd__clkbuf_2)
+     8    0.018339                                       net55 (net)
+                      0.106139    0.000738    6.591880 ^ fanout53/A (sky130_fd_sc_hd__clkbuf_4)
+                      0.146632    0.233094    6.824973 ^ fanout53/X (sky130_fd_sc_hd__clkbuf_4)
+    16    0.046488                                       net53 (net)
+                      0.146637    0.000723    6.825696 ^ _155_/C (sky130_fd_sc_hd__and4bb_1)
+                      0.051327    0.195476    7.021173 ^ _155_/X (sky130_fd_sc_hd__and4bb_1)
+     1    0.002178                                       _070_ (net)
+                      0.051327    0.000024    7.021197 ^ _156_/C (sky130_fd_sc_hd__and3_1)
+                      0.139052    0.220518    7.241715 ^ _156_/X (sky130_fd_sc_hd__and3_1)
+     2    0.012994                                       _008_ (net)
+                      0.139059    0.000798    7.242513 ^ _202_/D (sky130_fd_sc_hd__dfxtp_2)
+                                              7.242513   data arrival time
+---------------------------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= min_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= min_tt_025C_1v80 Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+input45/X                                16     23     -7 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 832 unannotated drivers.
+ analog_io[0]
+ analog_io[10]
+ analog_io[11]
+ analog_io[12]
+ analog_io[13]
+ analog_io[14]
+ analog_io[15]
+ analog_io[16]
+ analog_io[17]
+ analog_io[18]
+ analog_io[19]
+ analog_io[1]
+ analog_io[20]
+ analog_io[21]
+ analog_io[22]
+ analog_io[23]
+ analog_io[24]
+ analog_io[25]
+ analog_io[26]
+ analog_io[27]
+ analog_io[28]
+ analog_io[2]
+ analog_io[3]
+ analog_io[4]
+ analog_io[5]
+ analog_io[6]
+ analog_io[7]
+ analog_io[8]
+ analog_io[9]
+ analog_trigger_in
+ analog_trigger_out
+ io_in[0]
+ io_in[10]
+ io_in[11]
+ io_in[12]
+ io_in[13]
+ io_in[14]
+ io_in[15]
+ io_in[16]
+ io_in[17]
+ io_in[18]
+ io_in[19]
+ io_in[1]
+ io_in[20]
+ io_in[21]
+ io_in[22]
+ io_in[23]
+ io_in[24]
+ io_in[25]
+ io_in[26]
+ io_in[27]
+ io_in[28]
+ io_in[29]
+ io_in[2]
+ io_in[30]
+ io_in[31]
+ io_in[32]
+ io_in[33]
+ io_in[34]
+ io_in[35]
+ io_in[36]
+ io_in[37]
+ io_in[3]
+ io_in[4]
+ io_in[5]
+ io_in[6]
+ io_in[7]
+ io_in[8]
+ io_in[9]
+ la_data_in[100]
+ la_data_in[101]
+ la_data_in[102]
+ la_data_in[103]
+ la_data_in[104]
+ la_data_in[105]
+ la_data_in[106]
+ la_data_in[107]
+ la_data_in[108]
+ la_data_in[109]
+ la_data_in[10]
+ la_data_in[110]
+ la_data_in[111]
+ la_data_in[112]
+ la_data_in[113]
+ la_data_in[114]
+ la_data_in[115]
+ la_data_in[116]
+ la_data_in[117]
+ la_data_in[118]
+ la_data_in[119]
+ la_data_in[11]
+ la_data_in[120]
+ la_data_in[121]
+ la_data_in[122]
+ la_data_in[123]
+ la_data_in[124]
+ la_data_in[125]
+ la_data_in[126]
+ la_data_in[127]
+ la_data_in[12]
+ la_data_in[13]
+ la_data_in[14]
+ la_data_in[15]
+ la_data_in[16]
+ la_data_in[17]
+ la_data_in[18]
+ la_data_in[19]
+ la_data_in[1]
+ la_data_in[20]
+ la_data_in[21]
+ la_data_in[22]
+ la_data_in[23]
+ la_data_in[24]
+ la_data_in[25]
+ la_data_in[26]
+ la_data_in[27]
+ la_data_in[28]
+ la_data_in[29]
+ la_data_in[2]
+ la_data_in[30]
+ la_data_in[31]
+ la_data_in[32]
+ la_data_in[33]
+ la_data_in[34]
+ la_data_in[35]
+ la_data_in[36]
+ la_data_in[37]
+ la_data_in[38]
+ la_data_in[39]
+ la_data_in[3]
+ la_data_in[40]
+ la_data_in[41]
+ la_data_in[42]
+ la_data_in[43]
+ la_data_in[44]
+ la_data_in[45]
+ la_data_in[46]
+ la_data_in[47]
+ la_data_in[48]
+ la_data_in[49]
+ la_data_in[4]
+ la_data_in[50]
+ la_data_in[51]
+ la_data_in[52]
+ la_data_in[53]
+ la_data_in[54]
+ la_data_in[55]
+ la_data_in[56]
+ la_data_in[57]
+ la_data_in[58]
+ la_data_in[59]
+ la_data_in[5]
+ la_data_in[60]
+ la_data_in[61]
+ la_data_in[62]
+ la_data_in[63]
+ la_data_in[64]
+ la_data_in[65]
+ la_data_in[66]
+ la_data_in[67]
+ la_data_in[68]
+ la_data_in[69]
+ la_data_in[6]
+ la_data_in[70]
+ la_data_in[71]
+ la_data_in[72]
+ la_data_in[73]
+ la_data_in[74]
+ la_data_in[75]
+ la_data_in[76]
+ la_data_in[77]
+ la_data_in[78]
+ la_data_in[79]
+ la_data_in[7]
+ la_data_in[80]
+ la_data_in[81]
+ la_data_in[82]
+ la_data_in[83]
+ la_data_in[84]
+ la_data_in[85]
+ la_data_in[86]
+ la_data_in[87]
+ la_data_in[88]
+ la_data_in[89]
+ la_data_in[8]
+ la_data_in[90]
+ la_data_in[91]
+ la_data_in[92]
+ la_data_in[93]
+ la_data_in[94]
+ la_data_in[95]
+ la_data_in[96]
+ la_data_in[97]
+ la_data_in[98]
+ la_data_in[99]
+ la_data_in[9]
+ la_oenb[0]
+ la_oenb[100]
+ la_oenb[101]
+ la_oenb[102]
+ la_oenb[103]
+ la_oenb[104]
+ la_oenb[105]
+ la_oenb[106]
+ la_oenb[107]
+ la_oenb[108]
+ la_oenb[109]
+ la_oenb[10]
+ la_oenb[110]
+ la_oenb[111]
+ la_oenb[112]
+ la_oenb[113]
+ la_oenb[114]
+ la_oenb[115]
+ la_oenb[116]
+ la_oenb[117]
+ la_oenb[118]
+ la_oenb[119]
+ la_oenb[11]
+ la_oenb[120]
+ la_oenb[121]
+ la_oenb[122]
+ la_oenb[123]
+ la_oenb[124]
+ la_oenb[125]
+ la_oenb[126]
+ la_oenb[127]
+ la_oenb[12]
+ la_oenb[13]
+ la_oenb[14]
+ la_oenb[15]
+ la_oenb[16]
+ la_oenb[17]
+ la_oenb[18]
+ la_oenb[19]
+ la_oenb[1]
+ la_oenb[20]
+ la_oenb[21]
+ la_oenb[22]
+ la_oenb[23]
+ la_oenb[24]
+ la_oenb[25]
+ la_oenb[26]
+ la_oenb[27]
+ la_oenb[28]
+ la_oenb[29]
+ la_oenb[2]
+ la_oenb[30]
+ la_oenb[31]
+ la_oenb[32]
+ la_oenb[33]
+ la_oenb[34]
+ la_oenb[35]
+ la_oenb[36]
+ la_oenb[37]
+ la_oenb[38]
+ la_oenb[39]
+ la_oenb[3]
+ la_oenb[40]
+ la_oenb[41]
+ la_oenb[42]
+ la_oenb[43]
+ la_oenb[44]
+ la_oenb[45]
+ la_oenb[46]
+ la_oenb[47]
+ la_oenb[48]
+ la_oenb[49]
+ la_oenb[4]
+ la_oenb[50]
+ la_oenb[51]
+ la_oenb[52]
+ la_oenb[53]
+ la_oenb[54]
+ la_oenb[55]
+ la_oenb[56]
+ la_oenb[57]
+ la_oenb[58]
+ la_oenb[59]
+ la_oenb[5]
+ la_oenb[60]
+ la_oenb[61]
+ la_oenb[62]
+ la_oenb[63]
+ la_oenb[64]
+ la_oenb[65]
+ la_oenb[66]
+ la_oenb[67]
+ la_oenb[68]
+ la_oenb[69]
+ la_oenb[6]
+ la_oenb[70]
+ la_oenb[71]
+ la_oenb[72]
+ la_oenb[73]
+ la_oenb[74]
+ la_oenb[75]
+ la_oenb[76]
+ la_oenb[77]
+ la_oenb[78]
+ la_oenb[79]
+ la_oenb[7]
+ la_oenb[80]
+ la_oenb[81]
+ la_oenb[82]
+ la_oenb[83]
+ la_oenb[84]
+ la_oenb[85]
+ la_oenb[86]
+ la_oenb[87]
+ la_oenb[88]
+ la_oenb[89]
+ la_oenb[8]
+ la_oenb[90]
+ la_oenb[91]
+ la_oenb[92]
+ la_oenb[93]
+ la_oenb[94]
+ la_oenb[95]
+ la_oenb[96]
+ la_oenb[97]
+ la_oenb[98]
+ la_oenb[99]
+ la_oenb[9]
+ user_clock2
+ wb_rst_i
+ wbs_dat_i[10]
+ wbs_dat_i[11]
+ wbs_dat_i[12]
+ wbs_dat_i[13]
+ wbs_dat_i[14]
+ wbs_dat_i[15]
+ wbs_dat_i[16]
+ wbs_dat_i[17]
+ wbs_dat_i[18]
+ wbs_dat_i[19]
+ wbs_dat_i[20]
+ wbs_dat_i[21]
+ wbs_dat_i[22]
+ wbs_dat_i[23]
+ wbs_dat_i[24]
+ wbs_dat_i[25]
+ wbs_dat_i[26]
+ wbs_dat_i[27]
+ wbs_dat_i[28]
+ wbs_dat_i[29]
+ wbs_dat_i[30]
+ wbs_dat_i[31]
+ wbs_dat_i[8]
+ wbs_dat_i[9]
+ wbs_sel_i[0]
+ wbs_sel_i[1]
+ wbs_sel_i[2]
+ wbs_sel_i[3]
+ ANTENNA__219__A_512/HI
+ ANTENNA__220__A_511/HI
+ ANTENNA__221__A_510/HI
+ ANTENNA__222__A_509/HI
+ ANTENNA__223__A_508/HI
+ ANTENNA__224__A_507/HI
+ ANTENNA__225__A_506/HI
+ ANTENNA__226__A_505/HI
+ ANTENNA__227__A_504/HI
+ ANTENNA__228__A_503/HI
+ ANTENNA__229__A_502/HI
+ ANTENNA__230__A_501/HI
+ ANTENNA__231__A_500/HI
+ ANTENNA__232__A_499/HI
+ ANTENNA__233__A_498/HI
+ ANTENNA__234__A_497/HI
+ ANTENNA__235__A_496/HI
+ ANTENNA__236__A_495/HI
+ ANTENNA__237__A_494/HI
+ ANTENNA__238__A_493/HI
+ ANTENNA__239__A_492/HI
+ ANTENNA__240__A_491/HI
+ ANTENNA__241__A_490/HI
+ ANTENNA__242__A_489/HI
+ ANTENNA__243__A_488/HI
+ ANTENNA__244__A_487/HI
+ ANTENNA__245__A_486/HI
+ ANTENNA__246__A_485/HI
+ ANTENNA__247__A_484/HI
+ ANTENNA__248__A_483/HI
+ ANTENNA__249__A_482/HI
+ ANTENNA__250__A_481/HI
+ ANTENNA__251__A_480/HI
+ ANTENNA__252__A_479/HI
+ ANTENNA__253__A_478/HI
+ ANTENNA__254__A_477/HI
+ ANTENNA__255__A_476/HI
+ ANTENNA__256__A_475/HI
+ ANTENNA__257__A_474/HI
+ ANTENNA__258__A_473/HI
+ ANTENNA__259__A_472/HI
+ ANTENNA__260__A_471/HI
+ ANTENNA__261__A_470/HI
+ ANTENNA__262__A_469/HI
+ ANTENNA__263__A_468/HI
+ ANTENNA__264__A_467/HI
+ ANTENNA__265__A_466/HI
+ ANTENNA__266__A_465/HI
+ ANTENNA__267__A_464/HI
+ ANTENNA__268__A_463/HI
+ ANTENNA__269__A_462/HI
+ ANTENNA__270__A_461/HI
+ ANTENNA__271__A_460/HI
+ ANTENNA__272__A_459/HI
+ ANTENNA__273__A_458/HI
+ ANTENNA__274__A_457/HI
+ ANTENNA__275__A_456/HI
+ ANTENNA__276__A_455/HI
+ ANTENNA__277__A_454/HI
+ ANTENNA__278__A_453/HI
+ ANTENNA__279__A_452/HI
+ ANTENNA__280__A_451/HI
+ ANTENNA__281__A_450/HI
+ ANTENNA__282__A_540/LO
+ ANTENNA__283__A_449/HI
+ ANTENNA__284__A_448/HI
+ ANTENNA__285__A_447/HI
+ ANTENNA__286__A_539/LO
+ ANTENNA__287__A_446/HI
+ ANTENNA__288__A_445/HI
+ ANTENNA__289__A_444/HI
+ ANTENNA__290__A_538/LO
+ ANTENNA__291__A_537/LO
+ ANTENNA__292__A_443/HI
+ ANTENNA__293__A_442/HI
+ ANTENNA__294__A_536/LO
+ ANTENNA__295__A_535/LO
+ ANTENNA__296__A_441/HI
+ ANTENNA__297__A_440/HI
+ ANTENNA__298__A_534/LO
+ ANTENNA__299__A_439/HI
+ ANTENNA__300__A_533/LO
+ ANTENNA__301__A_438/HI
+ ANTENNA__302__A_532/LO
+ ANTENNA__303__A_437/HI
+ ANTENNA__304__A_531/LO
+ ANTENNA__305__A_436/HI
+ ANTENNA__306__A_435/HI
+ ANTENNA__307__A_530/LO
+ ANTENNA__308__A_434/HI
+ ANTENNA__309__A_529/LO
+ ANTENNA__310__A_433/HI
+ ANTENNA__311__A_528/LO
+ ANTENNA__312__A_432/HI
+ ANTENNA__313__A_527/LO
+ ANTENNA__314__A_431/HI
+ ANTENNA__315__A_430/HI
+ ANTENNA__316__A_429/HI
+ ANTENNA__317__A_428/HI
+ ANTENNA__318__A_427/HI
+ ANTENNA__319__A_426/HI
+ ANTENNA__320__A_425/HI
+ ANTENNA__321__A_424/HI
+ ANTENNA__322__A_423/HI
+ ANTENNA__323__A_422/HI
+ ANTENNA__324__A_421/HI
+ ANTENNA__325__A_420/HI
+ ANTENNA__326__A_419/HI
+ ANTENNA__327__A_418/HI
+ ANTENNA__328__A_417/HI
+ ANTENNA__329__A_416/HI
+ ANTENNA__330__A_415/HI
+ ANTENNA__331__A_414/HI
+ ANTENNA__332__A_413/HI
+ ANTENNA__333__A_412/HI
+ ANTENNA__334__A_411/HI
+ ANTENNA__335__A_410/HI
+ ANTENNA__336__A_409/HI
+ ANTENNA__337__A_408/HI
+ ANTENNA__338__A_407/HI
+ ANTENNA__339__A_406/HI
+ ANTENNA__340__A_405/HI
+ ANTENNA__341__A_404/HI
+ ANTENNA__342__A_403/HI
+ ANTENNA__343__A_402/HI
+ ANTENNA__344__A_401/HI
+ ANTENNA__345__A_400/HI
+ ANTENNA__346__A_399/HI
+ ANTENNA__347__A_398/HI
+ ANTENNA__348__A_397/HI
+ ANTENNA__349__A_396/HI
+ ANTENNA__350__A_395/HI
+ ANTENNA__351__A_394/HI
+ ANTENNA__352__A_393/HI
+ ANTENNA__353__A_392/HI
+ ANTENNA__354__A_391/HI
+ ANTENNA__355__A_390/HI
+ ANTENNA__356__A_389/HI
+ ANTENNA__357__A_388/HI
+ ANTENNA__358__A_387/HI
+ ANTENNA__359__A_386/HI
+ ANTENNA__360__A_385/HI
+ ANTENNA__361__A_384/HI
+ ANTENNA__362__A_383/HI
+ ANTENNA__363__A_382/HI
+ ANTENNA__364__A_381/HI
+ ANTENNA__365__A_380/HI
+ ANTENNA__366__A_379/HI
+ ANTENNA__367__A_378/HI
+ ANTENNA__368__A_377/HI
+ ANTENNA__369__A_376/HI
+ ANTENNA__370__A_375/HI
+ ANTENNA__371__A_374/HI
+ ANTENNA__372__A_373/HI
+ ANTENNA__373__A_372/HI
+ ANTENNA__374__A_371/HI
+ ANTENNA__375__A_370/HI
+ ANTENNA__376__A_369/HI
+ ANTENNA__377__A_368/HI
+ ANTENNA__378__A_367/HI
+ ANTENNA__379__A_366/HI
+ ANTENNA__380__A_365/HI
+ ANTENNA__381__A_364/HI
+ ANTENNA__382__A_363/HI
+ ANTENNA__383__A_362/HI
+ ANTENNA__384__A_361/HI
+ ANTENNA__385__A_360/HI
+ ANTENNA__386__A_359/HI
+ ANTENNA__387__A_358/HI
+ ANTENNA__388__A_357/HI
+ ANTENNA__389__A_356/HI
+ ANTENNA__390__A_355/HI
+ ANTENNA__391__A_354/HI
+ ANTENNA__392__A_353/HI
+ ANTENNA__393__A_352/HI
+ ANTENNA__394__A_351/HI
+ ANTENNA__395__A_350/HI
+ ANTENNA__396__A_349/HI
+ ANTENNA__397__A_348/HI
+ ANTENNA__398__A_347/HI
+ ANTENNA__399__A_346/HI
+ ANTENNA__400__A_345/HI
+ ANTENNA__401__A_344/HI
+ ANTENNA__402__A_343/HI
+ ANTENNA__403__A_342/HI
+ ANTENNA__404__A_341/HI
+ ANTENNA__405__A_340/HI
+ ANTENNA__406__A_339/HI
+ ANTENNA__407__A_338/HI
+ ANTENNA__408__A_337/HI
+ ANTENNA__409__A_336/HI
+ ANTENNA__410__A_335/HI
+ ANTENNA__411__A_334/HI
+ ANTENNA__412__A_333/HI
+ ANTENNA__413__A_332/HI
+ ANTENNA__414__A_331/HI
+ ANTENNA__415__A_330/HI
+ ANTENNA__416__A_329/HI
+ ANTENNA__417__A_328/HI
+ ANTENNA__418__A_327/HI
+ ANTENNA__419__A_326/HI
+ ANTENNA__420__A_325/HI
+ ANTENNA__421__A_324/HI
+ ANTENNA__422__A_323/HI
+ ANTENNA__423__A_322/HI
+ ANTENNA__424__A_321/HI
+ ANTENNA__425__A_320/HI
+ ANTENNA__426__A_319/HI
+ ANTENNA__427__A_318/HI
+ ANTENNA__428__A_317/HI
+ ANTENNA__429__A_316/HI
+ ANTENNA__430__A_315/HI
+ ANTENNA__431__A_314/HI
+ ANTENNA__432__A_313/HI
+ ANTENNA__433__A_312/HI
+ ANTENNA__434__A_311/HI
+ ANTENNA__435__A_310/HI
+ ANTENNA__436__A_309/HI
+ ANTENNA__437__A_308/HI
+ ANTENNA__438__A_307/HI
+ ANTENNA__439__A_306/HI
+ ANTENNA__440__A_305/HI
+ ANTENNA__441__A_304/HI
+ ANTENNA__442__A_303/HI
+ ANTENNA__443__A_302/HI
+ ANTENNA__444__A_301/HI
+ ANTENNA__445__A_300/HI
+ ANTENNA__446__A_299/HI
+ ANTENNA__447__A_298/HI
+ ANTENNA__448__A_297/HI
+ ANTENNA__449__A_296/HI
+ ANTENNA__450__A_295/HI
+ ANTENNA__451__A_294/HI
+ ANTENNA__452__A_293/HI
+ ANTENNA__453__A_292/HI
+ ANTENNA__454__A_291/HI
+ ANTENNA__455__A_290/HI
+ ANTENNA__456__A_289/HI
+ ANTENNA__457__A_288/HI
+ _219__63/HI
+ _220__64/HI
+ _221__65/HI
+ _222__66/HI
+ _223__67/HI
+ _224__68/HI
+ _225__69/HI
+ _226__70/HI
+ _227__71/HI
+ _228__72/HI
+ _229__73/HI
+ _230__74/HI
+ _231__75/HI
+ _232__76/HI
+ _233__77/HI
+ _234__78/HI
+ _235__79/HI
+ _236__80/HI
+ _237__81/HI
+ _238__82/HI
+ _239__83/HI
+ _240__84/HI
+ _241__85/HI
+ _242__86/HI
+ _243__87/HI
+ _244__88/HI
+ _245__89/HI
+ _246__90/HI
+ _247__91/HI
+ _248__92/HI
+ _249__93/HI
+ _250__94/HI
+ _251__95/HI
+ _252__96/HI
+ _253__97/HI
+ _254__98/HI
+ _255__99/HI
+ _256__100/HI
+ _257__101/HI
+ _258__102/HI
+ _259__103/HI
+ _260__104/HI
+ _261__105/HI
+ _262__106/HI
+ _263__107/HI
+ _264__108/HI
+ _265__109/HI
+ _266__110/HI
+ _267__111/HI
+ _268__112/HI
+ _269__113/HI
+ _270__114/HI
+ _271__115/HI
+ _272__116/HI
+ _273__117/HI
+ _274__118/HI
+ _275__119/HI
+ _276__120/HI
+ _277__121/HI
+ _278__122/HI
+ _279__123/HI
+ _280__124/HI
+ _281__125/HI
+ _282__513/LO
+ _283__126/HI
+ _284__127/HI
+ _285__128/HI
+ _286__514/LO
+ _287__129/HI
+ _288__130/HI
+ _289__131/HI
+ _290__515/LO
+ _291__516/LO
+ _292__132/HI
+ _293__133/HI
+ _294__517/LO
+ _295__518/LO
+ _296__134/HI
+ _297__135/HI
+ _298__519/LO
+ _299__136/HI
+ _300__520/LO
+ _301__137/HI
+ _302__521/LO
+ _303__138/HI
+ _304__522/LO
+ _305__139/HI
+ _306__140/HI
+ _307__523/LO
+ _308__141/HI
+ _309__524/LO
+ _310__142/HI
+ _311__525/LO
+ _312__143/HI
+ _313__526/LO
+ _314__144/HI
+ _315__145/HI
+ _316__146/HI
+ _317__147/HI
+ _318__148/HI
+ _319__149/HI
+ _320__150/HI
+ _321__151/HI
+ _322__152/HI
+ _323__153/HI
+ _324__154/HI
+ _325__155/HI
+ _326__156/HI
+ _327__157/HI
+ _328__158/HI
+ _329__159/HI
+ _330__160/HI
+ _331__161/HI
+ _332__162/HI
+ _333__163/HI
+ _334__164/HI
+ _335__165/HI
+ _336__166/HI
+ _337__167/HI
+ _338__168/HI
+ _339__169/HI
+ _340__170/HI
+ _341__171/HI
+ _342__172/HI
+ _343__173/HI
+ _344__174/HI
+ _345__175/HI
+ _346__176/HI
+ _347__177/HI
+ _348__178/HI
+ _349__179/HI
+ _350__180/HI
+ _351__181/HI
+ _352__182/HI
+ _353__183/HI
+ _354__184/HI
+ _355__185/HI
+ _356__186/HI
+ _357__187/HI
+ _358__188/HI
+ _359__189/HI
+ _360__190/HI
+ _361__191/HI
+ _362__192/HI
+ _363__193/HI
+ _364__194/HI
+ _365__195/HI
+ _366__196/HI
+ _367__197/HI
+ _368__198/HI
+ _369__199/HI
+ _370__200/HI
+ _371__201/HI
+ _372__202/HI
+ _373__203/HI
+ _374__204/HI
+ _375__205/HI
+ _376__206/HI
+ _377__207/HI
+ _378__208/HI
+ _379__209/HI
+ _380__210/HI
+ _381__211/HI
+ _382__212/HI
+ _383__213/HI
+ _384__214/HI
+ _385__215/HI
+ _386__216/HI
+ _387__217/HI
+ _388__218/HI
+ _389__219/HI
+ _390__220/HI
+ _391__221/HI
+ _392__222/HI
+ _393__223/HI
+ _394__224/HI
+ _395__225/HI
+ _396__226/HI
+ _397__227/HI
+ _398__228/HI
+ _399__229/HI
+ _400__230/HI
+ _401__231/HI
+ _402__232/HI
+ _403__233/HI
+ _404__234/HI
+ _405__235/HI
+ _406__236/HI
+ _407__237/HI
+ _408__238/HI
+ _409__239/HI
+ _410__240/HI
+ _411__241/HI
+ _412__242/HI
+ _413__243/HI
+ _414__244/HI
+ _415__245/HI
+ _416__246/HI
+ _417__247/HI
+ _418__248/HI
+ _419__249/HI
+ _420__250/HI
+ _421__251/HI
+ _422__252/HI
+ _423__253/HI
+ _424__254/HI
+ _425__255/HI
+ _426__256/HI
+ _427__257/HI
+ _428__258/HI
+ _429__259/HI
+ _430__260/HI
+ _431__261/HI
+ _432__262/HI
+ _433__263/HI
+ _434__264/HI
+ _435__265/HI
+ _436__266/HI
+ _437__267/HI
+ _438__268/HI
+ _439__269/HI
+ _440__270/HI
+ _441__271/HI
+ _442__272/HI
+ _443__273/HI
+ _444__274/HI
+ _445__275/HI
+ _446__276/HI
+ _447__277/HI
+ _448__278/HI
+ _449__279/HI
+ _450__280/HI
+ _451__281/HI
+ _452__282/HI
+ _453__283/HI
+ _454__284/HI
+ _455__285/HI
+ _456__286/HI
+ _457__287/HI
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+%OL_METRIC_I design__max_slew_violation__count__corner:min_tt_025C_1v80 0
+max fanout violation count 1
+%OL_METRIC_I design__max_fanout_violation__count__corner:min_tt_025C_1v80 1
+max cap violation count 0
+%OL_METRIC_I design__max_cap_violation__count__corner:min_tt_025C_1v80 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 25 unclocked register/latch pins.
+  _194_/CLK
+  _195_/CLK
+  _196_/CLK
+  _197_/CLK
+  _198_/CLK
+  _199_/CLK
+  _200_/CLK
+  _201_/CLK
+  _202_/CLK
+  _203_/CLK
+  _204_/CLK
+  _205_/CLK
+  _206_/CLK
+  _207_/CLK
+  _208_/CLK
+  _209_/CLK
+  _210_/CLK
+  _211_/CLK
+  _212_/CLK
+  _213_/CLK
+  _214_/CLK
+  _215_/CLK
+  _216_/CLK
+  _217_/CLK
+  _218_/CLK
+Warning: There are 298 unconstrained endpoints.
+  analog_io[0]
+  analog_io[10]
+  analog_io[11]
+  analog_io[12]
+  analog_io[13]
+  analog_io[14]
+  analog_io[15]
+  analog_io[16]
+  analog_io[17]
+  analog_io[18]
+  analog_io[19]
+  analog_io[1]
+  analog_io[20]
+  analog_io[21]
+  analog_io[22]
+  analog_io[23]
+  analog_io[24]
+  analog_io[25]
+  analog_io[26]
+  analog_io[27]
+  analog_io[28]
+  analog_io[2]
+  analog_io[3]
+  analog_io[4]
+  analog_io[5]
+  analog_io[6]
+  analog_io[7]
+  analog_io[8]
+  analog_io[9]
+  analog_trigger_in
+  analog_trigger_out
+  io_oeb[0]
+  io_oeb[10]
+  io_oeb[11]
+  io_oeb[12]
+  io_oeb[13]
+  io_oeb[14]
+  io_oeb[15]
+  io_oeb[16]
+  io_oeb[17]
+  io_oeb[18]
+  io_oeb[19]
+  io_oeb[1]
+  io_oeb[20]
+  io_oeb[21]
+  io_oeb[22]
+  io_oeb[23]
+  io_oeb[24]
+  io_oeb[25]
+  io_oeb[26]
+  io_oeb[27]
+  io_oeb[28]
+  io_oeb[29]
+  io_oeb[2]
+  io_oeb[30]
+  io_oeb[31]
+  io_oeb[32]
+  io_oeb[33]
+  io_oeb[34]
+  io_oeb[35]
+  io_oeb[36]
+  io_oeb[37]
+  io_oeb[3]
+  io_oeb[4]
+  io_oeb[5]
+  io_oeb[6]
+  io_oeb[7]
+  io_oeb[8]
+  io_oeb[9]
+  io_out[0]
+  io_out[10]
+  io_out[11]
+  io_out[12]
+  io_out[13]
+  io_out[14]
+  io_out[15]
+  io_out[16]
+  io_out[17]
+  io_out[18]
+  io_out[19]
+  io_out[1]
+  io_out[20]
+  io_out[21]
+  io_out[22]
+  io_out[23]
+  io_out[24]
+  io_out[25]
+  io_out[26]
+  io_out[27]
+  io_out[28]
+  io_out[29]
+  io_out[2]
+  io_out[30]
+  io_out[31]
+  io_out[32]
+  io_out[33]
+  io_out[34]
+  io_out[35]
+  io_out[36]
+  io_out[37]
+  io_out[3]
+  io_out[4]
+  io_out[5]
+  io_out[6]
+  io_out[7]
+  io_out[8]
+  io_out[9]
+  la_data_out[0]
+  la_data_out[100]
+  la_data_out[101]
+  la_data_out[102]
+  la_data_out[103]
+  la_data_out[104]
+  la_data_out[105]
+  la_data_out[106]
+  la_data_out[107]
+  la_data_out[108]
+  la_data_out[109]
+  la_data_out[10]
+  la_data_out[110]
+  la_data_out[111]
+  la_data_out[112]
+  la_data_out[113]
+  la_data_out[114]
+  la_data_out[115]
+  la_data_out[116]
+  la_data_out[117]
+  la_data_out[118]
+  la_data_out[119]
+  la_data_out[11]
+  la_data_out[120]
+  la_data_out[121]
+  la_data_out[122]
+  la_data_out[123]
+  la_data_out[124]
+  la_data_out[125]
+  la_data_out[126]
+  la_data_out[127]
+  la_data_out[12]
+  la_data_out[13]
+  la_data_out[14]
+  la_data_out[15]
+  la_data_out[16]
+  la_data_out[17]
+  la_data_out[18]
+  la_data_out[19]
+  la_data_out[1]
+  la_data_out[20]
+  la_data_out[21]
+  la_data_out[22]
+  la_data_out[23]
+  la_data_out[24]
+  la_data_out[25]
+  la_data_out[26]
+  la_data_out[27]
+  la_data_out[28]
+  la_data_out[29]
+  la_data_out[2]
+  la_data_out[30]
+  la_data_out[31]
+  la_data_out[32]
+  la_data_out[33]
+  la_data_out[34]
+  la_data_out[35]
+  la_data_out[36]
+  la_data_out[37]
+  la_data_out[38]
+  la_data_out[39]
+  la_data_out[3]
+  la_data_out[40]
+  la_data_out[41]
+  la_data_out[42]
+  la_data_out[43]
+  la_data_out[44]
+  la_data_out[45]
+  la_data_out[46]
+  la_data_out[47]
+  la_data_out[48]
+  la_data_out[49]
+  la_data_out[4]
+  la_data_out[50]
+  la_data_out[51]
+  la_data_out[52]
+  la_data_out[53]
+  la_data_out[54]
+  la_data_out[55]
+  la_data_out[56]
+  la_data_out[57]
+  la_data_out[58]
+  la_data_out[59]
+  la_data_out[5]
+  la_data_out[60]
+  la_data_out[61]
+  la_data_out[62]
+  la_data_out[63]
+  la_data_out[64]
+  la_data_out[65]
+  la_data_out[66]
+  la_data_out[67]
+  la_data_out[68]
+  la_data_out[69]
+  la_data_out[6]
+  la_data_out[70]
+  la_data_out[71]
+  la_data_out[72]
+  la_data_out[73]
+  la_data_out[74]
+  la_data_out[75]
+  la_data_out[76]
+  la_data_out[77]
+  la_data_out[78]
+  la_data_out[79]
+  la_data_out[7]
+  la_data_out[80]
+  la_data_out[81]
+  la_data_out[82]
+  la_data_out[83]
+  la_data_out[84]
+  la_data_out[85]
+  la_data_out[86]
+  la_data_out[87]
+  la_data_out[88]
+  la_data_out[89]
+  la_data_out[8]
+  la_data_out[90]
+  la_data_out[91]
+  la_data_out[92]
+  la_data_out[93]
+  la_data_out[94]
+  la_data_out[95]
+  la_data_out[96]
+  la_data_out[97]
+  la_data_out[98]
+  la_data_out[99]
+  la_data_out[9]
+  pwm_fall_out
+  pwm_rise_out
+  user_irq[0]
+  user_irq[1]
+  user_irq[2]
+  wbs_ack_o
+  wbs_dat_o[0]
+  wbs_dat_o[10]
+  wbs_dat_o[11]
+  wbs_dat_o[12]
+  wbs_dat_o[13]
+  wbs_dat_o[14]
+  wbs_dat_o[15]
+  wbs_dat_o[16]
+  wbs_dat_o[17]
+  wbs_dat_o[18]
+  wbs_dat_o[19]
+  wbs_dat_o[1]
+  wbs_dat_o[20]
+  wbs_dat_o[21]
+  wbs_dat_o[22]
+  wbs_dat_o[23]
+  wbs_dat_o[24]
+  wbs_dat_o[25]
+  wbs_dat_o[26]
+  wbs_dat_o[27]
+  wbs_dat_o[28]
+  wbs_dat_o[29]
+  wbs_dat_o[2]
+  wbs_dat_o[30]
+  wbs_dat_o[31]
+  wbs_dat_o[3]
+  wbs_dat_o[4]
+  wbs_dat_o[5]
+  wbs_dat_o[6]
+  wbs_dat_o[7]
+  wbs_dat_o[8]
+  wbs_dat_o[9]
+  _194_/D
+  _195_/D
+  _196_/D
+  _197_/D
+  _198_/D
+  _199_/D
+  _200_/D
+  _201_/D
+  _202_/D
+  _203_/D
+  _204_/D
+  _205_/D
+  _206_/D
+  _207_/D
+  _208_/D
+  _209_/D
+  _210_/D
+  _211_/D
+  _212_/D
+  _213_/D
+  _214_/D
+  _215_/D
+  _216_/D
+  _217_/D
+  _218_/D
+%OL_END_REPORT
+%OL_CREATE_REPORT power.rpt
+
+===========================================================================
+ report_power
+============================================================================
+======================= min_tt_025C_1v80 Corner ===================================
+
+Group                    Internal    Switching      Leakage        Total
+                            Power        Power        Power        Power (Watts)
+------------------------------------------------------------------------
+Sequential           5.456888e-06 3.182492e-06 2.109834e-10 8.639591e-06  23.3%
+Combinational        1.002928e-05 1.843378e-05 4.235776e-08 2.850541e-05  76.7%
+Macro                0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Pad                  0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+------------------------------------------------------------------------
+Total                1.548617e-05 2.161627e-05 4.256872e-08 3.714500e-05 100.0%
+                            41.7%        58.2%         0.1%
+
+%OL_END_REPORT
+%OL_CREATE_REPORT skew.min.rpt
+
+===========================================================================
+Clock Skew (Hold)
+============================================================================
+%OL_METRIC_F clock__skew__worst_hold__corner:min_tt_025C_1v80 0.000000
+======================= min_tt_025C_1v80 Corner ===================================
+
+Clock clk
+No launch/capture paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT skew.max.rpt
+
+===========================================================================
+Clock Skew (Setup)
+============================================================================
+%OL_METRIC_F clock__skew__worst_setup__corner:min_tt_025C_1v80 0.000000
+======================= min_tt_025C_1v80 Corner ===================================
+
+Clock clk
+No launch/capture paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT ws.min.rpt
+
+===========================================================================
+Worst Slack (Hold)
+============================================================================
+%OL_METRIC_F timing__hold__ws__corner:min_tt_025C_1v80 INF
+min_tt_025C_1v80: INF
+%OL_END_REPORT
+%OL_CREATE_REPORT ws.max.rpt
+
+===========================================================================
+Worst Slack (Setup)
+============================================================================
+%OL_METRIC_F timing__setup__ws__corner:min_tt_025C_1v80 INF
+min_tt_025C_1v80: INF
+%OL_END_REPORT
+%OL_CREATE_REPORT tns.min.rpt
+
+===========================================================================
+Total Negative Slack (Hold)
+============================================================================
+%OL_METRIC_F timing__hold__tns__corner:min_tt_025C_1v80 0.000000
+min_tt_025C_1v80: 0.000000
+%OL_END_REPORT
+%OL_CREATE_REPORT tns.max.rpt
+
+===========================================================================
+Total Negative Slack (Setup)
+============================================================================
+%OL_METRIC_F timing__setup__tns__corner:min_tt_025C_1v80 0.000000
+min_tt_025C_1v80: 0.000000
+%OL_END_REPORT
+%OL_CREATE_REPORT wns.min.rpt
+
+===========================================================================
+Worst Negative Slack (Hold)
+============================================================================
+%OL_METRIC_F timing__hold__wns__corner:min_tt_025C_1v80 0
+min_tt_025C_1v80: 0
+%OL_END_REPORT
+%OL_CREATE_REPORT wns.max.rpt
+
+===========================================================================
+Worst Negative Slack (Setup)
+============================================================================
+%OL_METRIC_F timing__setup__wns__corner:min_tt_025C_1v80 0.0
+min_tt_025C_1v80: 0.0
+%OL_END_REPORT
+%OL_CREATE_REPORT violator_list.rpt
+
+===========================================================================
+Violator List
+============================================================================
+%OL_METRIC_I timing__hold_vio__count__corner:min_tt_025C_1v80 0
+%OL_METRIC_I timing__hold_r2r_vio__count__corner:min_tt_025C_1v80 0
+%OL_METRIC_I timing__setup_vio__count__corner:min_tt_025C_1v80 0
+%OL_METRIC_I timing__setup_r2r_vio__count__corner:min_tt_025C_1v80 0
+%OL_END_REPORT
+Writing SDF files for all corners…
+Writing timing models for all corners…
+Writing timing models for the min_tt_025C_1v80 corner to /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/36-openroad-stapostpnr/min_tt_025C_1v80/TOP_digital__min_tt_025C_1v80.lib…

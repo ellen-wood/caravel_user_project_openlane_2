@@ -1,0 +1,55 @@
+Reading OpenROAD database at '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/14-openroad-generatepdn/TOP_digital.odb'…
+Reading library file at '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/tmp/f994421629554077a147bbbc5c335823.lib'…
+Reading design constraints file at '/nix/store/if4qs4kwxyyv6gdg9rv9a0ln0zamd293-python3.10-openlane/lib/python3.10/site-packages/openlane/scripts/base.sdc'…
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[WARNING STA-0559] transition time can not be specified for virtual clocks.
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO] Setting signal min routing layer to: met1 and clock min routing layer to met1. 
+[INFO] Setting signal max routing layer to: met4 and clock max routing layer to met4. 
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 5520 10880
+[INFO GPL-0005] CoreAreaUxUy: 744280 737120
+[INFO GPL-0006] NumInstances: 8357
+[INFO GPL-0007] NumPlaceInstances: 157
+[INFO GPL-0008] NumFixedInstances: 8200
+[INFO GPL-0009] NumDummyInstances: 0
+[INFO GPL-0010] NumNets: 556
+[INFO GPL-0011] NumPins: 1004
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 750000 750000
+[INFO GPL-0014] CoreAreaLxLy: 5520 10880
+[INFO GPL-0015] CoreAreaUxUy: 744280 737120
+[INFO GPL-0016] CoreArea: 536517062400
+[INFO GPL-0017] NonPlaceInstsArea: 11596121600
+[INFO GPL-0018] PlaceInstsArea: 2014432000
+[INFO GPL-0019] Util(%): 0.38
+[INFO GPL-0020] StdInstsArea: 2014432000
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00000007 HPWL: 59300310
+[InitialPlace]  Iter: 2 CG residual: 0.00000473 HPWL: 46082030
+[InitialPlace]  Iter: 3 CG residual: 0.00011473 HPWL: 42182097
+[InitialPlace]  Iter: 4 CG residual: 0.00001393 HPWL: 36371337
+[InitialPlace]  Iter: 5 CG residual: 0.00000224 HPWL: 32927610
+[INFO GPL-0031] FillerInit: NumGCells: 23025
+[INFO GPL-0032] FillerInit: NumGNets: 556
+[INFO GPL-0033] FillerInit: NumGPins: 1004
+[INFO GPL-0023] TargetDensity: 0.55
+[INFO GPL-0024] AveragePlaceInstArea: 12830777
+[INFO GPL-0025] IdealBinArea: 23328684
+[INFO GPL-0026] IdealBinCnt: 22998
+[INFO GPL-0027] TotalBinArea: 536517062400
+[INFO GPL-0028] BinCnt: 128 128
+[INFO GPL-0029] BinSize: 5772 5674
+[INFO GPL-0030] NumBins: 16384
+[WARNING RSZ-0088] Corner: nom_tt_025C_1v80 has no wire signal resistance value.
+[ERROR RSZ-0089] Could not find a resistance value for any corner. Cannot evaluate max wire length for buffer. Check over your `set_wire_rc` configuration
+Error: gpl.tcl, 62 RSZ-0089

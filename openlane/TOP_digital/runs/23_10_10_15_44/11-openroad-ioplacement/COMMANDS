@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/11-openroad-ioplacement/or_metrics_out.json /nix/store/if4qs4kwxyyv6gdg9rv9a0ln0zamd293-python3.10-openlane/lib/python3.10/site-packages/openlane/scripts/openroad/ioplacer.tcl

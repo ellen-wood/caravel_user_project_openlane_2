@@ -1,0 +1,119 @@
+Reading OpenROAD database at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_08/14-openroad-generatepdn/TOP_digital.odb'…
+Reading library file at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_08/tmp/ca80f22f411b44c7b01fb7d539fd98ef.lib'…
+Reading design constraints file at '/nix/store/ixkawr2rm870iw9p31jr6cicdswgpcx8-python3-3.10.9-env/lib/python3.10/site-packages/openlane/scripts/base.sdc'…
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[WARNING STA-0559] transition time can not be specified for virtual clocks.
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO] Setting signal min routing layer to: met1 and clock min routing layer to met1. 
+[INFO] Setting signal max routing layer to: met4 and clock max routing layer to met4. 
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 5520 10880
+[INFO GPL-0005] CoreAreaUxUy: 894240 886720
+[INFO GPL-0006] NumInstances: 11820
+[INFO GPL-0007] NumPlaceInstances: 160
+[INFO GPL-0008] NumFixedInstances: 11660
+[INFO GPL-0009] NumDummyInstances: 0
+[INFO GPL-0010] NumNets: 559
+[INFO GPL-0011] NumPins: 1013
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 900000 900000
+[INFO GPL-0014] CoreAreaLxLy: 5520 10880
+[INFO GPL-0015] CoreAreaUxUy: 894240 886720
+[INFO GPL-0016] CoreArea: 778376524800
+[INFO GPL-0017] NonPlaceInstsArea: 16200537600
+[INFO GPL-0018] PlaceInstsArea: 2036953600
+[INFO GPL-0019] Util(%): 0.27
+[INFO GPL-0020] StdInstsArea: 2036953600
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00000008 HPWL: 71958590
+[InitialPlace]  Iter: 2 CG residual: 0.00020800 HPWL: 56339628
+[InitialPlace]  Iter: 3 CG residual: 0.00048221 HPWL: 50473690
+[InitialPlace]  Iter: 4 CG residual: 0.00001616 HPWL: 42816241
+[InitialPlace]  Iter: 5 CG residual: 0.00000200 HPWL: 39171142
+[INFO GPL-0031] FillerInit: NumGCells: 33595
+[INFO GPL-0032] FillerInit: NumGNets: 559
+[INFO GPL-0033] FillerInit: NumGPins: 1013
+[INFO GPL-0023] TargetDensity: 0.55
+[INFO GPL-0024] AveragePlaceInstArea: 12730960
+[INFO GPL-0025] IdealBinArea: 23147200
+[INFO GPL-0026] IdealBinCnt: 33627
+[INFO GPL-0027] TotalBinArea: 778376524800
+[INFO GPL-0028] BinCnt: 128 128
+[INFO GPL-0029] BinSize: 6944 6843
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter: 1 overflow: 0.591234 HPWL: 36063081
+[INFO GPL-0100] worst slack 1e+30
+[WARNING GPL-0102] No slacks found. Timing-driven mode disabled.
+[NesterovSolve] Snapshot saved at iter = 0
+[NesterovSolve] Iter: 10 overflow: 0.534954 HPWL: 34765681
+[NesterovSolve] Iter: 20 overflow: 0.526989 HPWL: 34293752
+[NesterovSolve] Iter: 30 overflow: 0.535734 HPWL: 34118935
+[NesterovSolve] Iter: 40 overflow: 0.531366 HPWL: 34100547
+[NesterovSolve] Iter: 50 overflow: 0.551806 HPWL: 34053089
+[NesterovSolve] Iter: 60 overflow: 0.53673 HPWL: 34080001
+[NesterovSolve] Iter: 70 overflow: 0.539903 HPWL: 33994878
+[NesterovSolve] Iter: 80 overflow: 0.534417 HPWL: 33999689
+[NesterovSolve] Iter: 90 overflow: 0.525226 HPWL: 34062295
+[NesterovSolve] Iter: 100 overflow: 0.532008 HPWL: 33995727
+[NesterovSolve] Iter: 110 overflow: 0.539228 HPWL: 34048709
+[NesterovSolve] Iter: 120 overflow: 0.535475 HPWL: 34025286
+[NesterovSolve] Iter: 130 overflow: 0.527169 HPWL: 34078358
+[NesterovSolve] Iter: 140 overflow: 0.526733 HPWL: 34095709
+[NesterovSolve] Iter: 150 overflow: 0.536389 HPWL: 34111529
+[NesterovSolve] Iter: 160 overflow: 0.537251 HPWL: 34087878
+[NesterovSolve] Iter: 170 overflow: 0.528576 HPWL: 34086600
+[NesterovSolve] Iter: 180 overflow: 0.530014 HPWL: 34143817
+[NesterovSolve] Iter: 190 overflow: 0.530894 HPWL: 34108467
+[NesterovSolve] Iter: 200 overflow: 0.525622 HPWL: 34003258
+[NesterovSolve] Iter: 210 overflow: 0.52109 HPWL: 34073667
+[NesterovSolve] Iter: 220 overflow: 0.518644 HPWL: 34067849
+[NesterovSolve] Iter: 230 overflow: 0.509189 HPWL: 34062816
+[NesterovSolve] Iter: 240 overflow: 0.50514 HPWL: 34013995
+[NesterovSolve] Iter: 250 overflow: 0.484422 HPWL: 34033121
+[NesterovSolve] Iter: 260 overflow: 0.452862 HPWL: 33945839
+[NesterovSolve] Iter: 270 overflow: 0.433242 HPWL: 33989483
+[NesterovSolve] Iter: 280 overflow: 0.387964 HPWL: 34041072
+[NesterovSolve] Iter: 290 overflow: 0.355014 HPWL: 34068313
+[NesterovSolve] Iter: 300 overflow: 0.317778 HPWL: 34150719
+[NesterovSolve] Iter: 310 overflow: 0.263296 HPWL: 34260141
+[NesterovSolve] Iter: 320 overflow: 0.236093 HPWL: 34355571
+[INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
+[INFO GPL-0036] TileLxLy: 0 0
+[INFO GPL-0037] TileSize: 6900 6900
+[INFO GPL-0038] TileCnt: 130 130
+[INFO GPL-0039] numRoutingLayers: 6
+[INFO GPL-0040] NumTiles: 16900
+[INFO GPL-0063] TotalRouteOverflowH2: 0
+[INFO GPL-0064] TotalRouteOverflowV2: 0
+[INFO GPL-0065] OverflowTileCnt2: 0
+[INFO GPL-0066] 0.5%RC: 0.7802395228140369
+[INFO GPL-0067] 1.0%RC: 0.7153153043609481
+[INFO GPL-0068] 2.0%RC: 0.6595345391883506
+[INFO GPL-0069] 5.0%RC: 0.600961549171748
+[INFO GPL-0070] 0.5rcK: 1
+[INFO GPL-0071] 1.0rcK: 1
+[INFO GPL-0072] 2.0rcK: 0
+[INFO GPL-0073] 5.0rcK: 0
+[INFO GPL-0074] FinalRC: 0.7477774
+[NesterovSolve] Iter: 330 overflow: 0.16258 HPWL: 34561358
+[NesterovSolve] Iter: 340 overflow: 0.145994 HPWL: 34720952
+[NesterovSolve] Iter: 350 overflow: 0.163779 HPWL: 34457035
+[NesterovSolve] Iter: 360 overflow: 0.12731 HPWL: 34256258
+[NesterovSolve] Iter: 370 overflow: 0.103501 HPWL: 34201288
+[NesterovSolve] Finished with Overflow: 0.099469
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Writing OpenROAD database to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_08/15-openroad-globalplacement/TOP_digital.odb'…
+Writing netlist to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_08/15-openroad-globalplacement/TOP_digital.nl.v'…
+Writing powered netlist to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_08/15-openroad-globalplacement/TOP_digital.pnl.v'…
+Writing layout to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_08/15-openroad-globalplacement/TOP_digital.def'…

@@ -7,9 +7,10 @@
     "ROUTING_CORES": 1,
     "CLOCK_PERIOD": 25,
     "CLOCK_PORT": "wb_clk_i",
-    "CLOCK_NET": "mprj.clk",
-    "PDN_MACRO_CONNECTIONS": ["mprj vccd1 vssd1 vccd1 vssd1"],
+    "CLOCK_NET": "TOP_digital.clk",
+    "PDN_MACRO_CONNECTIONS": ["TOP_digital vccd1 vssd1 vccd1 vssd1"],
     "MAGIC_DEF_LABELS": 0,
+  
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
     "IO_SYNC": 0,
     "MAX_TRANSITION_CONSTRAINT": 1.5,
@@ -66,21 +67,21 @@
         "vssa2"
     ],
     "MACROS": {
-        "user_proj_example": {
+        "TOP_digital": {
             "gds": [
-                "dir::../../gds/user_proj_example.gds"
+                "dir::../../gds/TOP_digital.gds"
             ],
             "lef": [
-                "dir::../../lef/user_proj_example.lef"
+                "dir::../../lef/TOP_digital.lef"
             ],
             "instances": {
-                "mprj": {
+                "TOP_digital": {
                     "location": [60, 15],
                     "orientation": "N"
                 }
             },
             "nl": [
-                "dir::../../verilog/gl/user_proj_example.v"
+                "dir::../../verilog/gl/TOP_digital.v"
             ],
             "spef": {
                 "min_*": [

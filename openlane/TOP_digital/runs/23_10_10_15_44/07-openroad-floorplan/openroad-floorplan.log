@@ -1,0 +1,47 @@
+Reading library file at '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/tmp/f994421629554077a147bbbc5c335823.lib'…
+Reading technology LEF file at '/root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef'…
+[INFO ODB-0222] Reading LEF file: /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0226] Finished LEF file:  /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef
+Reading cell LEF file at '/root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef'…
+[INFO ODB-0222] Reading LEF file: /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0225]     Created 437 library cells
+[INFO ODB-0226] Finished LEF file:  /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+Reading cell LEF file at '/root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef'…
+[INFO ODB-0222] Reading LEF file: /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef at line 2.
+
+[INFO ODB-0225]     Created 5 library cells
+[INFO ODB-0226] Finished LEF file:  /root/eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef
+Reading top-level netlist at '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/02-yosys-synthesis/TOP_digital.nl.v'…
+Linking design 'TOP_digital' from netlist…
+Reading design constraints file at '/nix/store/if4qs4kwxyyv6gdg9rv9a0ln0zamd293-python3.10-openlane/lib/python3.10/site-packages/openlane/scripts/base.sdc'…
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+[WARNING STA-0337] port 'clk' not found.
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[WARNING STA-0559] transition time can not be specified for virtual clocks.
+[INFO] Setting timing derate to: 5%
+[INFO IFP-0001] Added 267 rows of 1606 site unithd with height 1.
+[INFO IFP-0030] Inserted 1 tiecells using sky130_fd_sc_hd__conb_1/LO.
+[INFO IFP-0030] Inserted 1 tiecells using sky130_fd_sc_hd__conb_1/HI.
+[INFO] Extracting DIE_AREA and CORE_AREA from the floorplan
+[INFO] Floorplanned on a die area of 0.0 0.0 750.0 750.0 (µm).
+[INFO] Floorplanned on a core area of 5.52 10.88 744.28 737.12 (µm).
+Writing metric design__die__bbox: 0.0 0.0 750.0 750.0
+Writing metric design__core__bbox: 5.52 10.88 744.28 737.12
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Writing OpenROAD database to '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/07-openroad-floorplan/TOP_digital.odb'…
+Writing netlist to '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/07-openroad-floorplan/TOP_digital.nl.v'…
+Writing powered netlist to '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/07-openroad-floorplan/TOP_digital.pnl.v'…
+Writing layout to '/root/isolator_transformer/driver_ic_v3_skywater_0u13_RISC-V/logic/PWM_module/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_10_15_44/07-openroad-floorplan/TOP_digital.def'…

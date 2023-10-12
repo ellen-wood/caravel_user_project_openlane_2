@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_10_19/28-openroad-detailedrouting/or_metrics_out.json /nix/store/ixkawr2rm870iw9p31jr6cicdswgpcx8-python3-3.10.9-env/lib/python3.10/site-packages/openlane/scripts/openroad/drt.tcl

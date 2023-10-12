@@ -1,0 +1,53 @@
+{
+   "creator": "Yosys 0.30+48 (git sha1 14d50a176d5, clang++ 11.1.0 -fPIC -Os)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\TOP_digital": {
+         "num_wires":         151,
+         "num_wire_bits":     601,
+         "num_pub_wires":     30,
+         "num_pub_wire_bits": 466,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         154,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 12,
+            "$_AND_": 5,
+            "$_MUX_": 41,
+            "$_NAND_": 4,
+            "$_NOR_": 1,
+            "$_NOT_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 41,
+            "$_XNOR_": 3,
+            "$_XOR_": 20,
+            "sky130_fd_sc_hd__dfxtp_2": 25
+         }
+      }
+   },
+      "design": {
+         "num_wires":         151,
+         "num_wire_bits":     601,
+         "num_pub_wires":     30,
+         "num_pub_wire_bits": 466,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         154,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 12,
+            "$_AND_": 5,
+            "$_MUX_": 41,
+            "$_NAND_": 4,
+            "$_NOR_": 1,
+            "$_NOT_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 41,
+            "$_XNOR_": 3,
+            "$_XOR_": 20,
+            "sky130_fd_sc_hd__dfxtp_2": 25
+         }
+      }
+}
+

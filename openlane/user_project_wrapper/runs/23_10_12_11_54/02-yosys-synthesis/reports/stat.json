@@ -1,0 +1,33 @@
+{
+   "creator": "Yosys 0.30+48 (git sha1 14d50a176d5, clang++ 11.1.0 -fPIC -Os)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\user_project_wrapper": {
+         "num_wires":         19,
+         "num_wire_bits":     637,
+         "num_pub_wires":     19,
+         "num_pub_wire_bits": 637,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "num_cells_by_type": {
+            "TOP_digital": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         19,
+         "num_wire_bits":     637,
+         "num_pub_wires":     19,
+         "num_pub_wire_bits": 637,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "num_cells_by_type": {
+            "TOP_digital": 1
+         }
+      }
+}
+

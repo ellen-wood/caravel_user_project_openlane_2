@@ -1,0 +1,19 @@
+Reading OpenROAD database at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/34-openroad-fillinsertion/TOP_digital.odb'…
+Reading library file at '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/tmp/d13f44396fe94c32bff40d14c4196ac5.lib'…
+[INFO] CURRENT_SDC not found. Not reading an SDC file.
+[INFO] Setting RC values…
+%OL_CREATE_REPORT irdrop.rpt
+[INFO PSM-0002] Output voltage file is specified as: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_12_11_49/37-openroad-irdropreport/voltages.csv.
+[WARNING PSM-0019] Voltage on net vccd1 is not explicitly set.
+[WARNING PSM-0022] Using voltage 1.800V for VDD network.
+[INFO PSM-0076] Setting metal node density to be standard cell height times 5.
+[INFO PSM-0031] Number of PDN nodes on net vccd1 = 18205.
+[INFO PSM-0064] Number of voltage sources = 156.
+[INFO PSM-0040] All PDN stripes on net vccd1 are connected.
+########## IR report #################
+Corner: nom_tt_025C_1v80
+Worstcase voltage: 1.80e+00 V
+Average IR drop  : 2.23e-10 V
+Worstcase IR drop: 3.05e-09 V
+######################################
+%OL_END_REPORT

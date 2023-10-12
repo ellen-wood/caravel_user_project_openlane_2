@@ -42,6 +42,41 @@ module user_project_wrapper #(
     inout vssd1,	// User area 1 digital ground
     inout vssd2,	// User area 2 digital ground
 `endif
+    input wb_clk_i,
+    input wb_rst_i,
+    input wbs_stb_i,
+    input wbs_cyc_i,
+    input wbs_we_i,
+    input [3:0] wbs_sel_i,
+    input [31:0] wbs_dat_i,
+    input [31:0] wbs_adr_i,
+    output wbs_ack_o,
+    output [31:0] wbs_dat_o,
+
+    // IOs
+    input  [`MPRJ_IO_PADS-1:0] io_in,
+    output [`MPRJ_IO_PADS-1:0] io_out,
+    output [`MPRJ_IO_PADS-1:0] io_oeb,
+
+    // Analog (direct connection to GPIO pad---use with caution)
+    // Note that analog I/O is not available on the 7 lowest-numbered
+    // GPIO pads, and so the analog_io indexing is offset from the
+    // GPIO indexing by 7 (also upper 2 GPIOs do not have analog_io).
+    inout [`MPRJ_IO_PADS-10:0] analog_io,
+
+    // Logic Analyzer Signals
+   input  [127:0] la_data_in,
+   output [127:0] la_data_out,
+   input  [127:0] la_oenb,
+
+    // Independent clock (on independent integer divider)
+    input   user_clock2,
+
+    // User maskable interrupt signals
+    output [2:0] user_irq
+
+  /*
+  JW: PREVIOUS FOR THE WISHBONE COUNTER  
 
     // Wishbone Slave ports (WB MI A)
     input wb_clk_i,
@@ -76,46 +111,70 @@ module user_project_wrapper #(
 
     // User maskable interrupt signals
     output [2:0] user_irq
+    JW: END OF PREVIOUS FOR WISHBONE COUNTER 
+  */
 );
 
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_proj_example mprj (
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
+TOP_digital TOP_digital_1 (
+    `ifdef USE_POWER_PINS
+    .vdda1(vdda1),  // User area 1 3.3V power
+    .vdda2(vdda2),  // User area 2 3.3V power
+    .vssa1(vssa1),  // User area 1 analog ground
+    .vssa2(vssa2),  // User area 2 analog ground
+    .vccd1(vccd1),  // User area 1 1.8V power
+    .vccd2(vccd2),  // User area 2 1.8V power
+    .vssd1(vssd1),  // User area 1 digital ground
+    .vssd2(vssd2),  // User area 2 digital ground
+    `endif
 
+    //--- see  rgb_mixer.v
     .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
-
-    // MGMT SoC Wishbone Slave
-
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
-
-    // Logic Analyzer
-
+    //.wb_rst_i(la_data_in[0]),  // JW,  Matt uses logic analyser bit 0 to do a reset --- i connect it up at the lower level, not this level
+    .wb_rst_i(wb_rst_i),  // JW,  Matt uses logic analyser bit 0 to do a reset
+   
+    // wishbone
+    .wbs_cyc_i   (wbs_cyc_i),
+    .wbs_stb_i   (wbs_stb_i),
+    .wbs_we_i    (wbs_we_i),
+    .wbs_sel_i  (wbs_sel_i),
+    .wbs_adr_i  (wbs_adr_i),
+    .wbs_dat_i  (wbs_dat_i),
+    .wbs_ack_o   (wbs_ack_o),
+    .wbs_dat_o  (wbs_dat_o),
+  
+     // Logic Analyzer   
     .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
+   .la_data_out(la_data_out),
+   .la_oenb (la_oenb),
 
-    // IO Pads
+    //IO pads
+    .io_in(io_in),
+    .io_out(io_out),
+    .io_oeb(io_oeb),
 
-    .io_in ({io_in[37:30],io_in[7:0]}),
-    .io_out({io_out[37:30],io_out[7:0]}),
-    .io_oeb({io_oeb[37:30],io_oeb[7:0]}),
+    //oe lines need to be low for the pwm outputs   io_out[16:14] to appear
+    //but cant do it here as synthesis not allowed at this hierarcy level in the  openlane efabless 
+    //instead,  Matt poked extra pins into  rgb_mixer  
+    //.io_oeb(io_oeb),
 
-    // IRQ
-    .irq(user_irq)
+
+ // Analog (direct connection to GPIO pad---use with caution)
+    // Note that analog I/O is not available on the 7 lowest-numbered
+    // GPIO pads, and so the analog_io indexing is offset from the
+    // GPIO indexing by 7 (also upper 2 GPIOs do not have analog_io).
+    .analog_io(analog_io),
+
+    // Independent clock (on independent integer divider)
+    .user_clock2(user_clock2),
+
+    // User maskable interrupt signals
+    .user_irq(user_irq)
+
+
 );
 
 endmodule	// user_project_wrapper

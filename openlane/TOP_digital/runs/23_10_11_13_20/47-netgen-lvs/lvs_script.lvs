@@ -1,0 +1,13 @@
+puts "Reading SPICE netlist file '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fakediode_2.spice'..."
+readnet spice /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fakediode_2.spice 1
+puts "Reading SPICE netlist file '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice'..."
+readnet spice /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice 1
+puts "Reading SPICE netlist file '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice'..."
+readnet spice /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice 1
+puts "Reading SPICE netlist file '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice'..."
+readnet spice /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice 1
+puts "Reading SPICE netlist file '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice'..."
+readnet spice /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice 1
+puts "Reading SPICE netlist file '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice'..."
+readnet spice /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice 1
+lvs { /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_20/45-magic-spiceextraction/TOP_digital.spice TOP_digital } { /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_20/34-openroad-fillinsertion/TOP_digital.pnl.v TOP_digital } /root/eda/pdk/sky130B/libs.tech/netgen/sky130B_setup.tcl /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_13_20/47-netgen-lvs/lvs.rpt -json

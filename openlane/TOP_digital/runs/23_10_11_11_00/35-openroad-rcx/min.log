@@ -1,0 +1,50 @@
+Reading technology LEF file at '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef'…
+[INFO ODB-0222] Reading LEF file: /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0226] Finished LEF file:  /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef
+Reading cell LEF file at '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef'…
+[INFO ODB-0222] Reading LEF file: /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0225]     Created 437 library cells
+[INFO ODB-0226] Finished LEF file:  /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+Reading cell LEF file at '/root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef'…
+[INFO ODB-0222] Reading LEF file: /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef at line 2.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef at line 142.
+
+[INFO ODB-0225]     Created 4 library cells
+[INFO ODB-0226] Finished LEF file:  /root/eda/pdk/sky130B/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef
+[INFO ODB-0127] Reading DEF file: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_11_00/34-openroad-fillinsertion/TOP_digital.def
+[INFO ODB-0128] Design: TOP_digital
+[INFO ODB-0130]     Created 436 pins.
+[INFO ODB-0131]     Created 54674 components and 204311 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 203364 connections.
+[INFO ODB-0133]     Created 677 nets and 883 connections.
+[INFO ODB-0134] Finished DEF file: /root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_11_00/34-openroad-fillinsertion/TOP_digital.def
+Using RCX ruleset '/root/eda/pdk/sky130B/libs.tech/openlane/rules.openrcx.sky130B.min.spef_extractor'…
+[INFO RCX-0431] Defined process_corner CURRENT_CORNER with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner CURRENT_CORNER
+[INFO RCX-0008] extracting parasitics of TOP_digital ...
+[INFO RCX-0435] Reading extraction model file /root/eda/pdk/sky130B/libs.tech/openlane/rules.openrcx.sky130B.min.spef_extractor ...
+[INFO RCX-0436] RC segment generation TOP_digital (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 1135 rc segments
+[INFO RCX-0439] Coupling Cap extraction TOP_digital ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0043] 4701 wires to be extracted
+[INFO RCX-0442] 80% completion -- 3802 wires have been extracted
+[INFO RCX-0442] 100% completion -- 4701 wires have been extracted
+[INFO RCX-0045] Extract 677 nets, 1458 rsegs, 1458 caps, 1401 ccs
+[INFO RCX-0015] Finished extracting TOP_digital.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Writing extracted parasitics to '/root/eda/caravel_user_project_openlane_2/openlane/TOP_digital/runs/23_10_11_11_00/35-openroad-rcx/TOP_digital.min.spef'…
+[INFO RCX-0016] Writing SPEF ...
+[INFO RCX-0443] 677 nets finished
+[INFO RCX-0017] Finished writing SPEF ...
